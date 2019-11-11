@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<title>EthelM Banner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<body>
+
+<div class="w3-container">
+
+
+<div class="w3-content w3-display-container" style="max-width:800px">
+  <img class="mySlides" href="https://www.ethelm.com/chocolate-of-the-month" src="https://cdn-tp4.mozu.com/25786-m1/cms/files/1f9b5d1e-a518-4517-96f4-6f6aee563baf" alt="Chocolate of the Month. Learn More" style="width:100%">
+  <img class="mySlides" href="/holidaylights" src="https://cdn-tp4.mozu.com/25786-m1/cms/files/780836f8-dec9-4458-a525-dfa025433ae7" alt="Holiday Cactus Garden Lighting Learn More Banner" style="width:100%">
+  <img class="mySlides" src="https://cdn-tp4.mozu.com/25786-m1/cms/files/089b9bf3-aa24-481f-be51-4dfe2a6b7fdb" alt="chocolate business gifts" style="width:100%">
+  <img class="mySlides" src="https://cdn-tp4.mozu.com/25786-m1/cms/files/5ec0932f-7318-4b06-b246-c2d2239dc515" alt="Free Standard Shipping in Continental U.S. on any order!" style="width:100%">
+  <img class="mySlides" src="https://cdn-tp4.mozu.com/25786-m1/cms/files/84980836-085b-4d77-8a2e-1a2aedded0d5" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-green w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-darkgreen";
+}
+</script>
